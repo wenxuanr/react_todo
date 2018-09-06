@@ -2,7 +2,7 @@
   "name": "hello-world",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wenxuanr.github.io/react_todo/",
+  "homepage": "https://wenxuanr.github.io/react_todo/build",
   "dependencies": {
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
