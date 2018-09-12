@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import './App.css';
 import TodoInput from './TodoInput'
 import TodoItem from './TodoItem'
+import * as localStore from './localStore'
+
 
 class App extends Component { 
   constructor(props) {
     super(props)
     this.state = {
       newTodo: '',
-      todoList: [
-        {id:1, title:'todo1'},
-        {id:2, title:'todo2'}
-      ]
+      todoList: localStore.load('todoList') || []
     }
   }
-
+  componentDidMount() {
+    localStore.save('todoList', this.state.todoList)
+  }
   render() {
     let todos = this.state.todoList.filter((item,index)=> !item.deleted).map((item,index) => {
       return ( 
