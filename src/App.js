@@ -53,6 +53,7 @@ class App extends Component {
       newTodo: '',
       todoList: this.state.todoList
     })
+    console.log("Added")
     localStore.save('todoList', this.state.todoList)
   }
   changeTitle(e){
